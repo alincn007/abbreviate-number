@@ -1,0 +1,15 @@
+.container {
+  width: 400px;
+  margin: 200px auto;
+  padding: 20px;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.result {
+  margin-top: 20px;
+}

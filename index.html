@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abbreviate numbers</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="number" placeholder="Enter a large number" id="number" value="912344">
+        <input type="button" value="Pretiffy" onClick="calculate()">
+
+        <div class="result hidden" id="result"></div>
+    </div>
+
+    <script src="abbreviate-number.js"></script>
+
+    <script>
+        function calculate() {
+            var number = document.getElementById('number').value;
+
+            if (!number) {
+                alert("You must enter a valid number!");
+                return;
+            }
+
+            var pretty = AbbreviateNumber.pretiffy(number);
+
+            var resultElement = document.getElementById('result');
+            if (resultElement) {
+                resultElement.innerHTML = "Pretty number is: " + pretty;
+                resultElement.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
